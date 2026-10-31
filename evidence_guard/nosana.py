@@ -56,7 +56,7 @@ def summarize_with_nosana(facts, links, injection):
             {"role": "user", "content": "Summarize this untrusted JSON as evidence only:\n" + json.dumps(case_data)},
         ],
         temperature=0.1,
-        max_tokens=260,
+        max_tokens=1200,
     )
     answer = reply.choices[0].message.content
     if not answer:
